@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="nav">
       <a class="logo" href="index.html">
-        <img class="logo__img" src="./images/logo.svg" alt="Elite Roof Works " width="90" height="68">
+        <img class="logo__img" src="./images/logo.svg" alt="Elite Roof Works " width="302" height="40">
       </a>
 
       <button class="burger" aria-label="Mobile menu" type="button"> <span></span> </button>
@@ -11,8 +11,8 @@
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="index.html" class="nav__link {{ page === 'home' }}">
-              Home
+            <a href="about.html" class="nav__link {{ page === 'about' }}">
+              About Us
             </a>
           </li>
 
@@ -24,19 +24,23 @@
 
           <li class="nav__item">
             <a href="about.html" class="nav__link {{ page === 'about' }}">
-              About Us
+              Portfolio
             </a>
           </li>
 
           <li class="nav__item">
-            <a href="contact.html" class="nav__link {{ page === 'contact' }}">
-              Contact
+            <a href="faq.html" class="nav__link {{ page === 'FAQs' }}">
+              FAQs
             </a>
           </li>
         </ul>
 
-        <button class="btn request-btn" type="button">
-          Make A Request
+        <a class="btn btn--simple signup-btn" href="sign-up.html">
+          Sign Up
+        </a>
+ 
+        <button class="btn btn--request request-btn" type="button" formsappId="65e195cd4bfcc0c8d0761d2f">
+          Booking
         </button>
       </div>
     </nav>

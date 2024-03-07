@@ -2,55 +2,52 @@
 @use "../utils/mixins"as*;
 
 .policy {
-  padding: rem(30) 0;
-  line-height: 1.5;
-  color: var(--color-black);
-
-  &__inner {
-    max-width: 680px;
-  }
+  padding: 125px 0 203px 0;
+  color: var(--color-gray-09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
     position: relative;
-    margin: 0 auto rem(32);
+    margin-bottom: 48px;
     font-size: clamp(32px, 1.6176rem + 1.3vi, 56px);
     color: var(--color-tile-800);
   }
 
   h2 {
     font-family: var(--font-family-primary);
-    font-weight: var(--fw-500);
-    font-size: 20px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
-
-  ul {
-    margin-bottom: 30px;
-    padding-left: 15px;
-    font-weight: 600;
-  }
-
-  li {
-    list-style-type: disc;
-    line-height: 1.43;
-    letter-spacing: 0.02em;
-
-    &:not(:last-child) {
-      margin-bottom: 3px;
-    }
+    font-weight: var(--fw-600);
+    font-size: 30px;
+    line-height: 1.3;
+    color: var(--color-black-10);
+    margin-bottom: 24px;
   }
 
   p {
     font-size: 20px;
+    font-weight: var(--fw-400);
+    color: var(--color-gray-09);
+    line-height: 1.21;
 
     &:not(:last-child) {
-      margin-bottom: rem(25);
+      margin-bottom: 48px;
     }
   }
 
-  a {
-    text-decoration: underline;
-    color: var(--color-tile-800);
+  ul {
+    margin-bottom: 48px;
+
+    li {
+      font-size: 20px;
+      font-weight: var(--fw-400);
+      color: var(--color-gray-09);
+      line-height: 1.21;
+    }
   }
+
+  &--terms {
+    padding: 125px 0 197px 0;
+  }
+
 }

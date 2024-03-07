@@ -1,0 +1,90 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.blog {
+  $root: &;
+
+  padding: 88px 0 159px 0;
+
+  h1 {
+    margin-bottom: 23px;
+  }
+
+  h2 {
+    color: var(--color-black-10);
+    font-size: 26px;
+    font-weight: var(--fw-400);
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: 60px;
+    font-size: 26px;
+    font-weight: var(--fw-400);
+    line-height: 1.2;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 57px;
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &__image {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    height: 100%;
+    max-height: 400px;
+  }
+
+  @include media(tablet) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      &:last-child {
+        justify-self: center;
+        max-width: 360px;
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    margin-bottom: 30px;
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+      justify-self: center;
+
+      &:last-child {
+        grid-column: auto;
+        max-width: none;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__item {
+      padding: 16px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+}

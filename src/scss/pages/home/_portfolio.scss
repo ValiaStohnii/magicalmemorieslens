@@ -1,0 +1,24 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.portfolio {
+  padding: 100px 0;
+
+  h2 {
+    margin-bottom: 23px;
+  }
+
+  p {
+  margin-bottom: 20px;
+  }
+
+  &__image {
+    max-height: 567px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    max-height: 58px;
+    line-height: 1;
+  }
+}

@@ -33,7 +33,7 @@
   &__list {
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 20px 0 0;
 
     @include media(mobile-l) {
       z-index: -1;
@@ -42,8 +42,8 @@
   }
 
   &__item {
-    &:not(:last-of-type, .footer .nav__item) {
-      margin-right: rem(40);
+    &:not(:last-of-type) {
+      margin-right: 24px;
 
       @include media(mobile-l) {
         margin-right: 0;
@@ -57,11 +57,11 @@
 
   &__link {
     font-weight: var(--fw-500);
-    font-size: 20px;
-    color: var(--color-tile-800);
+    font-size: 18px;
+    color: var(--color-text-general);
 
     &.true {
-      border-bottom: 2px solid var(--color-tile-800);
+      border-bottom: 2px solid var(--color-text-general);
     }
   }
 
@@ -73,7 +73,7 @@
 
   @include media(mobile-l) {
     .logo {
-      max-width: 58px;
+      max-width: 300px;
     }
   }
 }
