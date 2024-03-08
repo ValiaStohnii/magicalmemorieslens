@@ -38,5 +38,22 @@
     .btn--simple {
       margin-right: 20px;
     }
+
+    .burger {
+      display: none;
+    }
+  }
+
+  .container {
+    max-width: 1360px;
+  }
+
+  @include media(mobile-l) {
+    .nav{
+      .logo {
+        margin-bottom: 0;
+      }
+    }
+    
   }
 }

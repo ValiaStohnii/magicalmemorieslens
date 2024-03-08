@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Portfolio"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": "Portfolio"}'></include>
+
+    <main class="main">
+      <include src="./html/portfolio/_hero.html"></include>
+      <div class="container">
+        <include src="./html/portfolio/_categories.html"></include>
+      </div>
+      <include src="./html/portfolio/_baner.html">
+        {
+          "baner": "wedding",
+          "class": "baner__content--bg",
+          "image": "hero-wedding-photography",
+          "title": "Wedding Photography",
+          "text": "Capturing the magic and romance of your special day with timeless elegance and artistic flair. From intimate moments to grand celebrations, we create stunning images that tell your love story for generations to come."
+        }
+      </include>
+
+      <div class="container">
+        <include src="./html/portfolio/_additional.html">
+          {
+            "additional": "fashion",
+            "reverse": "reverse",
+            "image": "hero-fashion-photoshoot",
+            "width": "425",
+            "height": "637",
+            "title": "Fashion Photoshoot",
+            "text": "Elevating style and sophistication with dynamic imagery that showcases the latest trends and designs. Our fashion photography captures the essence of elegance, beauty, and individuality, creating striking visuals that leave a lasting impression."
+          }
+        </include>
+      </div>
+
+      <include src="./html/portfolio/_baner.html">
+        {
+          "baner": "parties",
+          "class": "baner__content--bg",
+          "image": "hero-parties-celebrations",
+          "title": "Parties & Celebrations",
+          "text": "Preserving the joy, excitement, and memories of special occasions with vibrant and dynamic photography. Our party and celebration photography services capture the energy and spirit of the moment, ensuring that every milestone is commemorated with style and enthusiasm."
+        }
+      </include>
+
+      <div class="container">
+        <include src="./html/portfolio/_additional.html">
+          {
+            "additional": "portraits",
+            "reverse": "",
+            "image": "hero-portraits",
+            "width": "474",
+            "height": "438",
+            "title": "Portraits",
+            "text": "Celebrating the uniqueness and personality of each individual through captivating portraits. Whether it's a professional headshot, family portrait, or personal portrait session, we strive to capture the essence of our subjects with authenticity and grace."
+          }
+        </include>
+      </div>
+
+      <include src="./html/portfolio/_baner.html">
+        {
+          "baner": "commercials",
+          "class": "",
+          "image": "hero-commercials-ads",
+          "title": "Commercials & Ads",
+          "text": "Transforming ideas into captivating visuals that draw audiences and drive engagement. Our commercial photography services help businesses and brands showcase their products, services, and values with compelling imagery that stands out in today's competitive market."
+        }
+      </include>
+
+      <div class="container">
+        <include src="./html/portfolio/_additional.html">
+          {
+            "additional": "portraits",
+            "reverse": "",
+            "image": "hero-corporate-events",
+            "width": "474",
+            "height": "438",
+            "title": "Corporate Events",
+            "text": "Documenting the professionalism, camaraderie, and success of corporate events with precision and expertise. From conferences and seminars to galas and award ceremonies, we capture the essence of corporate gatherings with professionalism and finesse."
+          }
+        </include>
+
+        <include src="./html/portfolio/_gallery.html"></include>
+        
+        <include src="./html/home/_request.html"></include>
+      </div>
+    </main>
+  
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

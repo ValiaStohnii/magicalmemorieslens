@@ -1,0 +1,76 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.article {
+  padding: 111px 0 149px 0;
+  color: var(--color-gray-09);
+
+  &__header {
+    display: flex;
+    margin-bottom: 13px;
+
+    a {
+      min-width: 119px;
+      min-height: 40px;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: var(--fw-500);
+      margin-right: 16px;
+      padding-top: 11px;
+
+      &::before {
+        content: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.414531 6.39792L5.47703 11.4604C5.58258 11.566 5.72573 11.6253 5.875 11.6253C6.02427 11.6253 6.16742 11.566 6.27297 11.4604C6.37852 11.3549 6.43781 11.2117 6.43781 11.0624C6.43781 10.9132 6.37852 10.77 6.27297 10.6645L2.17023 6.56245H13.1875C13.3367 6.56245 13.4798 6.50318 13.5852 6.39769C13.6907 6.29221 13.75 6.14913 13.75 5.99995C13.75 5.85076 13.6907 5.70769 13.5852 5.6022C13.4798 5.49671 13.3367 5.43745 13.1875 5.43745H2.17023L6.27297 1.33542C6.37852 1.22987 6.43781 1.08671 6.43781 0.937447C6.43781 0.788179 6.37852 0.645026 6.27297 0.539478C6.16742 0.43393 6.02427 0.374634 5.875 0.374634C5.72573 0.374634 5.58258 0.43393 5.47703 0.539478L0.414531 5.60198C0.362232 5.65422 0.320742 5.71626 0.292435 5.78454C0.264128 5.85283 0.249557 5.92603 0.249557 5.99995C0.249557 6.07387 0.264128 6.14706 0.292435 6.21535C0.320742 6.28364 0.362232 6.34567 0.414531 6.39792Z' fill='%232C2C2E'/%3E%3C/svg%3E");
+        margin-right: 13px;
+        padding-left: 24px;
+      }
+    }
+  }
+
+  &__inner {
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--color-gray-06);
+  }
+
+  h1 {
+    position: relative;
+    margin-bottom: 16px;
+    color: var(--color-text-general);
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: var(--fw-400);
+    line-height: 1.2;
+    color: var(--color-gray-07);
+  }
+
+  h2 {
+    font-family: var(--font-family-primary);
+    font-weight: var(--fw-600);
+    font-size: 30px;
+    line-height: 1.3;
+    color: var(--color-black-10);
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: var(--fw-500);
+    color: var(--color-gray-09);
+    line-height: 1.21;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__image {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    &:first-child {
+      margin-bottom: 64px;
+    }
+  }
+}

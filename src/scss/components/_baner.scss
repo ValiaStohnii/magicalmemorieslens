@@ -1,0 +1,70 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.baner {
+  $root: &;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: 0 0;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    z-index: 1;
+    width: 100%;
+    min-width: 500px;
+    padding: 12px 20px;
+    max-width: 550px;
+    position: relative;
+    bottom: 124px;
+    left: 112px;
+
+    &--bg {
+      background-color: var( --color-black-01);
+    }
+  }
+
+  h1 {
+    margin-bottom: 24px;
+    font-size: 38px;
+    line-height: 1.2;
+    color: var(--color-white);
+  }
+
+  p {
+    font-weight: var(--fw-400);
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--color-white);
+  }
+
+  &--wedding {
+    #{$root}__inner {
+      min-height: 780px;
+    }
+  }
+
+  &--parties {
+    #{$root}__inner {
+      min-height: 720px;
+    }
+  }
+
+  &--commercials {
+    #{$root}__inner {
+      min-height: 720px;
+    }
+  }
+
+}
