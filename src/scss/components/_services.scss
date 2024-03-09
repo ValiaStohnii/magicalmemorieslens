@@ -127,6 +127,33 @@
     }
   }
 
+  @include media(desktop) {
+    padding: 60px 0;
+    h2 {
+      margin-bottom: 23px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    &__image {
+      max-width: 100%;
+      margin-bottom: 23px;
+    }
+
+    &--blog {    
+      #{$root}__grid {
+        gap: 30px;
+      }
+      span {
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
   @include media(tablet) {
     padding: rem(60) 0;
 
@@ -148,7 +175,6 @@
 
     &__item {
       padding: 24px;
-      padding-top: 96px;
 
       &:last-child {
         grid-column: auto;
@@ -159,6 +185,10 @@
   @include media(mobile-m) {
     .btn {
       max-width: none;
+    }
+
+    &__grid {
+      gap: 12px;
     }
   }
 }

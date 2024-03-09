@@ -54,6 +54,13 @@
         margin-bottom: 0;
       }
     }
-    
+  }
+
+  @include media(mobile-s) {
+    .nav{
+      .logo {
+        max-width: 200px;
+      }
+    }
   }
 }

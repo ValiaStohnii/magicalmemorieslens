@@ -29,6 +29,12 @@
     box-shadow: var( --shadow-primary);
   }
 
+  @include media(tablet-wide) {
+    &__image {
+      max-width: 100%;
+    }
+  }
+
   @include media(tablet) {
     &__grid {
       grid-template-columns: repeat(2, 1fr);

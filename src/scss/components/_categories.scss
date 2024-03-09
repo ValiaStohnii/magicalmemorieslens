@@ -41,4 +41,25 @@
     color: var(--color-dark);
   }
 
+  @include media(tablet) {
+    padding: 60px 0;
+
+    &__item {
+      flex-direction: column;
+    }
+    img {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  @include media(mobile-sm) {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 23px;
+    }
+  }
 }

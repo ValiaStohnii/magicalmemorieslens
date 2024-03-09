@@ -47,4 +47,18 @@
     line-height: 1.2;
     color: var(--color-black-10);
   }
+
+  @include media(desktop) {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @include media(tablet) {
+    padding: 60px 0;
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
 }

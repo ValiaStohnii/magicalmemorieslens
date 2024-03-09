@@ -21,4 +21,23 @@
     max-height: 58px;
     line-height: 1;
   }
+
+  @include media(tablet) {
+    padding: rem(60) 0;
+
+    p {
+      font-size: 18px;
+    }
+
+    &__image {
+      max-height: 300px;
+      object-position: 0 -500px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__image {
+      object-position: unset;
+    }
+  }
 }

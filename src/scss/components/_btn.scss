@@ -11,14 +11,23 @@
     display: inline-block;
   
   
-    &--request {
+    &--request,
+    &.formsapp-popup-button {
       background-color: var(--color-brown);
       color: var(--color-white);
       border: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 18px;
   
       @include media(tablet-wide) {
         padding: 5px;
         font-size: 13px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-brown-10);
       }
     }
   
@@ -31,6 +40,11 @@
       @include media(tablet-wide) {
         padding: 5px;
         font-size: 13px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-beige-03);
       }
     }
 }
