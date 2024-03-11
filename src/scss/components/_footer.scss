@@ -2,19 +2,75 @@
 @use "../utils/mixins/"as*;
 
 .footer {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-page-background);
+  border-top: 1px solid var(--color-beige);
+  border-bottom: 1px solid var(--color-beige);
+  transition-property: transform, padding;
+  transition-duration: 0.15s;
+
   &__copyrigth {
     text-align: center;
   }
 
-  .nav{
+  &__nav{
+    display: flex;
+    align-items: center;
+
     &__link {
       background-color: var(--color-page-background);
     }
+
+    @include media(tablet) {
+      flex-direction: column;
+  
+      .logo {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @include media(tablet) {
+      align-items: center;
+      justify-content: center
+    }
+
+    @include media(mobile-l) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  .nav__list {
+    z-index: 0;
+    flex-direction: row;
+
+    @include media(mobile-l) {
+      margin-bottom: 23px;
+    }
+  }
+
+  .nav__item {
+    @include media(mobile-l) {
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  .logo {
+    max-width: 302px;
+    width: 100%;
   }
 
   .btn {
     padding: 8px 20px;
-    max-height: 40px;
   }
 
   p {
@@ -24,8 +80,32 @@
 
   .container {
     max-width: 1390px;
+    padding: 12px var(--container-offset);
   }
 
+  .btn--simple {
+    margin-right: 20px;
+
+    @include media(mobile-l) {
+      margin-bottom: 12px;
+      margin-right: 0;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__nav {
+      align-items: flex-start;
+    }
+  }
+
+  @include media(mobile-s) {
+    &__nav {
+      .logo {
+        max-width: 200px;
+      }
+    }
+  }
+    
   &__copyrigth {
     padding: 88px 0;
     color: var(--color-white);
@@ -62,8 +142,6 @@
     }
   }
   @include media(mobile-l) {
-    padding: 44px 0 0 0;
-
     .logo {
       margin-bottom: 0;
     }
