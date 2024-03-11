@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 65px;
   }
 
   &__item {
@@ -27,7 +27,7 @@
 
   &__image {
     overflow: hidden;
-    border-radius: calc(var(--radius-main) * 2);
+    border-radius: calc(var(--radius-main) + 4px);
     max-height: 400px;
     height: 100%;
     max-width: 384px;
@@ -36,7 +36,7 @@
   }
 
   h2 {
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   h3 {
@@ -48,33 +48,38 @@
 
   .btn {
     display: inline-block;
-    padding: 20px 32px;
+    padding: 17px 31px;
     max-height: unset;
   }
 
-  &--blog {    
+  &--blog {   
+    padding: 106px 0; 
     #{$root}__header {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    h2 {
+      margin-bottom: 44px;
     }
 
     #{$root}__grid {
       gap: 57px;
-    }
 
-    #{$root}__image {
-      max-height: 367px;
-    }
-
-    span {
       a {
         font-size: 26px;
         font-weight: var(--fw-400);
         line-height: 1.2;
         color: var(--color-dark);
+        word-break: break-all;
       }
     }
 
+    #{$root}__image {
+      border-radius: 40px;
+    }
+    
     .btn {
       max-height: 58px;
       line-height: 1;
@@ -85,6 +90,10 @@
     #{$root}__grid {
       gap: 80px 32px;
       margin-bottom: 0;
+
+      @include media(tablet) {
+        gap: 30px;
+      }
     }
 
     #{$root}__image {
@@ -123,7 +132,11 @@
     }
 
     p {
-      margin-bottom: 80px
+      margin-bottom: 80px;
+
+      @include media(tablet) {
+        margin-bottom: 30px
+      }
     }
   }
 
@@ -140,6 +153,8 @@
     &__image {
       max-width: 100%;
       margin-bottom: 23px;
+      width: 100%;
+      aspect-ratio: 5/4;
     }
 
     &--blog {    
@@ -155,7 +170,7 @@
   }
 
   @include media(tablet) {
-    padding: rem(60) 0;
+    padding: 30px 0;
 
     &__grid {
       grid-template-columns: repeat(2, 1fr);
@@ -174,8 +189,6 @@
     }
 
     &__item {
-      padding: 24px;
-
       &:last-child {
         grid-column: auto;
       }

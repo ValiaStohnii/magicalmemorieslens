@@ -1,13 +1,13 @@
-const navigation = document.querySelector('.nav');
+const navigation = document.querySelectorAll('.nav');
 const page = document.querySelector('.page');
 
-navigation?.addEventListener('click', onBurgerBtnClick);
+navigation.forEach(element => element.addEventListener('click', onBurgerBtnClick))
 
 function onBurgerBtnClick(e) {
   if (!e.target.parentNode.matches('.burger') && !e.target.matches('.burger')) {
     return;
   }
-
+console.log(this)
   this?.classList.remove('closed');
   page?.classList.add('open');
 

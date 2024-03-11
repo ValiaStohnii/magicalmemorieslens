@@ -36,6 +36,7 @@
     font-weight: var(--fw-400);
     line-height: 1.2;
     color: var(--color-text-general);
+    margin-top: auto;
   }
 
   @include media(tablet) {

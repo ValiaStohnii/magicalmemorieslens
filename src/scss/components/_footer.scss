@@ -23,7 +23,7 @@
   }
 
   .container {
-    max-width: 1360px;
+    max-width: 1390px;
   }
 
   &__copyrigth {
@@ -34,6 +34,8 @@
       &__inner{
         display: flex;
         justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1216px;
 
         @include media(mobile-l) {
           flex-direction: column;
@@ -53,6 +55,10 @@
           margin-right: 48px;
         }
       }
+    }
+
+    @include media(tablet) {
+      padding: 30px 0;
     }
   }
   @include media(mobile-l) {

@@ -7,10 +7,20 @@
   align-items: center;
   justify-content: space-between;
 
+  .logo {
+    max-width: 302px;
+    width: 100%;
+  }
+
   &__inner {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+
+    @include media(tablet) {
+      align-items: center;
+      justify-content: center
+    }
 
     @include media(mobile-l) {
       position: fixed;
@@ -28,11 +38,6 @@
       transition-property: transform;
       transition-duration: 0.4s;
     }
-
-    @include media(tablet) {
-      align-items: center;
-      justify-content: center
-    }
   }
 
   &__list {
@@ -43,6 +48,7 @@
     @include media(mobile-l) {
       z-index: -1;
       flex-direction: column;
+      margin: 0;
     }
   }
 

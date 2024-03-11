@@ -15,14 +15,14 @@
     &.formsapp-popup-button {
       background-color: var(--color-brown);
       color: var(--color-white);
-      border: none;
+      border: 1px solid transparent;
       margin-top: 0;
       margin-bottom: 0;
       font-size: 18px;
   
       @include media(tablet-wide) {
-        padding: 5px;
-        font-size: 13px;
+        padding: 10px 20px !important;
+        font-size: 18px;
       }
 
       &:hover,
@@ -38,8 +38,8 @@
     
   
       @include media(tablet-wide) {
-        padding: 5px;
-        font-size: 13px;
+        padding: 10px 20px !important;
+        font-size: 18px;
       }
 
       &:hover,

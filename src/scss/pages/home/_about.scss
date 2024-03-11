@@ -14,7 +14,7 @@
   }
   &__content {
     max-width: 534px;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 
   img {
@@ -36,7 +36,7 @@
   }
 
   .btn {
-    padding: 20px 32px;
+    padding: 18px 31px;
     max-height: unset;
     max-width: fit-content;;
   }
@@ -83,7 +83,7 @@
   }
 
   @include media(tablet) {
-    padding: rem(60) 0;
+    padding: 60px 0 30px;
 
     h2 {
       font-size: 26px;
@@ -132,6 +132,7 @@
       display: flex;
       flex-direction: column;
       padding: 0;
+      margin-right: 12px;
     }
 
     h2 {
@@ -142,6 +143,20 @@
     .overlay {
       &::before {
         display: none;
+      }
+    }
+    &--services {
+      flex-direction: column;
+
+      img {
+        aspect-ratio: 5/3;
+        width: 100%;
+      }
+      #{$root}__box {
+        margin-right: 0;
+      }
+      #{$root}__content {
+        max-width: unset;
       }
     }
   }

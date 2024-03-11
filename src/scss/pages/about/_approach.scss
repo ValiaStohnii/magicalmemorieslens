@@ -41,7 +41,7 @@
     margin-bottom: 60px;
   }
 
-  &__svg {
+  &__icon {
     width: 96px;
     height: 96px;
     background-color: var(--color-beige-03);
@@ -93,10 +93,9 @@
   }
 
   @include media(tablet) {
-    padding: rem(40) 0 rem(60);
+    padding: 30px 0;
 
     &__list {
-      padding: 20px;
       gap: 15;
     }
   }
@@ -104,7 +103,6 @@
   @include media(mobile-l) {
     &__list {
       grid-template-columns: 1fr;
-      padding: 80px 16px;
     }
   }
 }
